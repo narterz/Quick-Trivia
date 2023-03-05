@@ -1,0 +1,65 @@
+@use '../base//functions' as flex;
+
+.questions {
+    @include flex.flex-position(column, center, center);
+
+    #trivia__header {
+        text-align: center;
+        height: 15%;
+    }
+
+    #progressBar {
+        height: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #trivia__main {
+        height: 65%;
+
+        #choice0 {
+            grid-area: choice1;
+        }
+
+        #choice1 {
+            grid-area: choice2;
+        }
+
+        #choice2 {
+            grid-area: choice3;
+        }
+
+        #choice3 {
+            grid-area: choice4;
+        }
+    }
+
+    #trivia__footer {
+        height: 15%;
+        @include flex.flex-position(column, space-evenly, center);
+
+        .footer__section {
+            height: 50%;
+            @include flex.flex-position(row, space-between);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #userInfo {
+            width: 100%;
+        }
+
+        #events {
+            width: 80%;
+        }
+    }
+}
+
+//results page after game completes
+.results {
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    @include flex.flex-position(column, space-evenly, center);
+}

@@ -1,0 +1,62 @@
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+ @mixin flex-position($directon, $justify, $align:''){
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $directon;
+    align-items: $align;
+ }
+
+ $breakpoints: (
+    "screen-sm": 450px,
+    "screen-md": 768px,
+    "screen-lg": 1280px,
+    "screen-xLg": 1920px
+)!default;
+
+@mixin sm {
+    @media (min-width: map-get($breakpoints, screen-sm)){
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: map-get($breakpoints, screen-md)){
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: map-get($breakpoints, screen-lg)){
+        @content;
+    }
+}
+@mixin xLg {
+    @media (min-width: map-get($breakpoints, screen-xLg)){
+        @content;
+    }
+}
+
+@mixin trivia-grid {
+    height: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "choice1 choice2"
+        "choice3 choice4";
+}
+
+@mixin triva-grid-lg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "choice1"
+    "choice2"
+    "choice3"
+    "choice4";
+}

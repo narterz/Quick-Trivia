@@ -1,0 +1,43 @@
+.circleLg, .circleSm {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+#circles-top, #circles-bottom {
+    position: relative;
+}
+
+.circleLg {
+    height: 174px;
+    width: 170px;
+}
+
+.circleSm {
+    height: 106px;
+    width: 103px;
+    right: 0;
+}
+
+#yellow {
+    right: 0;
+    top: 0;
+}
+
+#pink {
+    left: 0;
+    top: 0;
+}
+
+#orange {
+    left: 0;
+    bottom: 0;
+}
+
+#blue {
+    bottom: 0;
+    right: 0;
+}

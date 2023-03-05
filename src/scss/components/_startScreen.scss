@@ -1,0 +1,12 @@
+@use '../base/functions' as flex;
+
+.start {
+    height: inherit;
+    @include flex.flex-position(column, space-between);
+
+    #menu {
+        position: relative;
+        text-align: center;
+        @include flex.flex-position(column, none, center);
+    }
+}

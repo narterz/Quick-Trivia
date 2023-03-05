@@ -1,0 +1,37 @@
+@use '../base/functions' as breakpoints;
+
+#question {
+    @include breakpoints.xLg {
+        max-width: map-get(breakpoints.$breakpoints, screen-md );
+    }
+    @include breakpoints.lg {
+        max-width: map-get(breakpoints.$breakpoints, screen-md );
+    }
+}
+
+.questions {
+    @include breakpoints.lg {
+        max-width: map-get(breakpoints.$breakpoints, screen-md );
+    }
+    @include breakpoints.xLg {
+        
+    }
+}
+
+#trivia__main {
+    @include breakpoints.sm {
+        @include breakpoints.trivia-grid;
+    }
+    @include breakpoints.md {
+        @include breakpoints.trivia-grid;
+    }
+    @include breakpoints.lg {
+        @include breakpoints.triva-grid-lg;
+        min-width: map-get(breakpoints.$breakpoints, screen-md );
+    }
+    @include breakpoints.xLg {
+        @include breakpoints.triva-grid-lg;
+        max-width: map-get(breakpoints.$breakpoints, screen-lg );
+ 
+    }
+}

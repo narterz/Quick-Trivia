@@ -1,0 +1,56 @@
+@use './functions' as funcs;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Kanit:ital,wght@1,300&display=swap');
+
+$fonts: (
+    sizes: (
+        xLarge: 5rem,
+        large: 4.5rem,
+        normal: 4rem,
+        small: 3.5rem,
+        Xsmall: 1.25rem,
+    ),
+
+    weights: (
+        large: 700,
+        normal: 400,
+        small: 200,
+    ),
+);
+
+
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+button {
+    font-weight: funcs.map-deep-get($fonts, weights, large);
+}
+
+#menu {
+
+    h2 {
+        @include funcs.sm{
+            font-size: funcs.map-deep-get($fonts, sizes, small);
+        }
+    }
+
+    p {
+        @include funcs.sm {
+            font-size: funcs.map-deep-get($fonts, sizes, Xsmall);
+        }
+    }
+}
+
+#trivia__header {
+    @include funcs.sm {
+        #question {
+            font-size: funcs.map-deep-get($fonts, sizes, Xsmall);
+        }
+    }
+}
+
+#trivia__main {
+    @include funcs.lg {
+        font-size: 1.1vw;
+    }
+ }

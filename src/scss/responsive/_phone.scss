@@ -1,0 +1,82 @@
+@use '../base/functions' as breakpoints;
+
+.start {
+    @include breakpoints.sm {
+        width: 100%;
+    }
+
+    #circles-top,
+    #circles-bottom {
+        @include breakpoints.sm {
+            height: 40%;
+        }
+    }
+
+    #menu {
+        @include breakpoints.sm {
+            height: 30%;
+        
+            #menu-titles {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                height: 60%;
+        
+                h2 {
+                    height: 20%;
+                    width: 90%;
+                }
+        
+                p {
+                    height: 40%;
+                    width: 90%;
+                    text-align: center;
+                }
+            }
+        
+            #menu-btn {
+                width: 100%;
+                height: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+        }
+    }
+
+}
+
+.questions {
+    @include breakpoints.sm {
+        min-width: map-get(breakpoints.$breakpoints, screen-sm );
+ 
+        #question {
+            padding: 20px 20px;
+            min-width: inherit;
+        }
+    }
+
+    @include breakpoints.md {
+        min-width: map-get(breakpoints.$breakpoints, screen-md );
+    }
+}
+
+.trivia__section {
+    @include breakpoints.sm {
+        width: 95%;
+
+        #trivia__main {
+            @include breakpoints.trivia-grid;
+        }
+
+    }
+
+}
+
+
+
+
+

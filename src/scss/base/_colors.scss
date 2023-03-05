@@ -1,0 +1,68 @@
+$colors: (
+    main: #101543,
+    secondary: #63106A,
+    blue: #02B5EB,
+    pink: #F03CED,
+    orange: #F55C4F,
+    yellow: #F0B82C,
+);
+
+#root {
+    background-color: map-get($colors, main);
+}
+
+#menu, #trivia__header, #trivia__footer  {
+    color: white;
+}
+
+.start__section {
+
+    #entertainment,
+    #blue {
+        background-color: map-get($colors, blue);
+    }
+
+    #history,
+    #pink {
+        background-color: map-get($colors, pink);
+    }
+
+    #sportsleisure,
+    #orange {
+        background-color: map-get($colors, orange);
+    }
+
+    #music,
+    #yellow {
+        background-color: map-get($colors, yellow);
+    }
+}
+
+#trivia__main {
+    #choice0 {
+        background-color: map-get($colors, blue);
+    }
+
+    #choice1 {
+        background-color: map-get($colors, pink);
+    }
+
+    #choice2 {
+        background-color: map-get($colors, orange);
+    }
+
+    #choice3 {
+        background-color: map-get($colors, yellow);
+    }
+}
+
+#trivia__footer {
+
+    .btn-md {
+        background-color: white
+    }
+}
+
+.results {
+    color: white;
+}
