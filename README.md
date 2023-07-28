@@ -2,7 +2,7 @@
 
 ## Test your knowledge by answering 20 randomly generated questions pertaining to film & TV, science, and history
 
-![screenshot](qt-home.png.png)
+![screenshot](qt-home.png)
 
 ## Prominent features
 * Progress bar
